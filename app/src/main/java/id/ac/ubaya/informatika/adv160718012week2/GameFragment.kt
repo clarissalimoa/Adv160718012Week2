@@ -24,7 +24,6 @@ class GameFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        if(arguments!=null){
         arguments?.let{
             var playerName = GameFragmentArgs.fromBundle(requireArguments()).playerName
             txtTurnNow.text = "$playerName's Turn"
@@ -35,7 +34,6 @@ class GameFragment : Fragment() {
             btAnswer.setOnClickListener{
 //                while(lives>0) {
                     val answer = txtAnswer.text.toString().toInt()
-//                    txtCoba.text = txtAnswer.text.toString()
                     if (answer == addition()) {
                         score++
                         txtAnswer.text?.clear()
